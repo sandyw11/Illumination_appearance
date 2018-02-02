@@ -1,0 +1,24 @@
+#!/bin/bash
+
+make clean
+
+for i in $(find . -name *~) ; do
+	rm $i
+done
+
+for i in $(find . -name CMakeCache.txt) ; do
+	rm $i
+done
+
+for i in $(find . -name cmake_install.cmake) ; do
+	rm $i
+done
+
+for i in $(find . -name CMakeFiles) ; do
+	rm -r $i
+done
+
+for i in $(find . -name Makefile) ; do
+	rm -r $i
+done
+
